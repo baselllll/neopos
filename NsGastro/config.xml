@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>NsGastro</namespace>
+    <version>4.8.20</version>
+    <author>Blair Jersyer</author>
+    <name>Gastro 4x - Restaurant Extension</name>
+    <description>Gastro 4.x provides a restaurant features on top of NexoPOS 4.x to ease restaurant management.</description>
+    <core min-version="4.8.18"/>
+    <requires>
+        <dependency namespace="NsPrintAdapter" min-version="4.8.8">Nexo Print Adapter</dependency>
+    </requires>
+</module>

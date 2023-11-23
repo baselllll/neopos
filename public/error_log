@@ -1,0 +1,14 @@
+[31-Oct-2023 15:57:39 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:335
+Stack trace:
+#0 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic('replaceNamespac...', Array)
+#1 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(642): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(623): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(554): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#4 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(460): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#5 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(377): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\Finder\Exception\DirectoryNotFoundException))
+#6 /home/touchpaysa/public_html/mansense5/app/Exceptions/Handler.php(189): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\Finder\Exception\DirectoryNotFoundException))
+#7 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(493): App\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\Finder\Exception\DirectoryNotFoundException))
+#8 /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(138): Illuminate\Foundation\Http\Kernel->renderException(Object(Illuminate\Http\Request), Object(Symfony\Component\Finder\Exception\DirectoryNotFoundException))
+#9 /home/touchpaysa/public_html/mansense5/public/index.php(56): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#10 {main}
+  thrown in /home/touchpaysa/public_html/mansense5/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 335

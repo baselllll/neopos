@@ -1,0 +1,23 @@
+[12-Sep-2023 14:22:27 UTC] PHP Warning:  Undefined variable $tenderd in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 14:22:27 UTC] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 14:22:27 UTC] PHP Warning:  preg_replace(): No ending delimiter ',' found in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 14:22:27 UTC] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 228
+[12-Sep-2023 14:22:53 UTC] PHP Warning:  Undefined variable $tenderd in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 14:22:53 UTC] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 14:22:53 UTC] PHP Warning:  preg_replace(): No ending delimiter ',' found in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 14:22:53 UTC] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 228
+[12-Sep-2023 14:27:25 UTC] PHP Warning:  Undefined variable $tenderd in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 14:27:25 UTC] PHP Deprecated:  strtr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 222
+[12-Sep-2023 15:49:50 UTC] PHP Warning:  A non-numeric value encountered in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 194
+[13-Sep-2023 15:43:53 UTC] PHP Warning:  imagecreatefrompng(): &quot;./temp/1694619833tempqrcode.png&quot; is not a valid PNG file in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 274
+[13-Sep-2023 15:43:53 UTC] PHP Fatal error:  Uncaught TypeError: imagecolorallocate(): Argument #1 ($image) must be of type GdImage, bool given in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php:275
+Stack trace:
+#0 /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php(275): imagecolorallocate(false, 255, 255, 255)
+#1 /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php(233): addQRCode(Object(TCPDF), 'data:image/png;...', 4.0, 172.918769)
+#2 {main}
+  thrown in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 275
+[13-Sep-2023 19:41:34 UTC] PHP Warning:  unlink(./temp/1694634094tempqrcode.png): No such file or directory in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 287
+[17-Sep-2023 21:32:43 UTC] PHP Warning:  Undefined variable $tendered2 in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 232
+[17-Sep-2023 21:32:43 UTC] PHP Deprecated:  strtr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 232
+[17-Sep-2023 21:33:24 UTC] PHP Warning:  Undefined variable $tendered2 in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 232
+[17-Sep-2023 21:33:24 UTC] PHP Deprecated:  strtr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/touchpaysa/public_html/shishkab/public/EpsonPrinter/pdfGenerator.php on line 232
