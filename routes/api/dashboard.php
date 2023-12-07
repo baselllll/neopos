@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,3 +7,6 @@ Route::get( 'dashboard/best-customers', [ DashboardController::class, 'getBestCu
 Route::get( 'dashboard/best-cashiers', [ DashboardController::class, 'getBestCashiers' ]);
 Route::get( 'dashboard/recent-orders', [ DashboardController::class, 'getRecentsOrders' ]);
 Route::get( 'dashboard/weeks', [ DashboardController::class, 'getWeekReports' ]);
+
+
+

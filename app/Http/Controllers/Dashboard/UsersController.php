@@ -59,10 +59,11 @@ class UsersController extends DashboardController
         return UserCrud::form( $user );
     }
 
-    public function getUsers( User $user )
+    public function getUsers( User $user , Request $request  )
     {
-        ns()->restrict([ 'read.users' ]);
-
+        if (!isset($request->api_version)){
+            ns()->restrict([ 'read.users' ]);
+        }
         return User::get([ 'username', 'id', 'email' ]);
     }
 

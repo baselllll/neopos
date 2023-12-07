@@ -14,7 +14,7 @@ Route::prefix( 'nexopos/v4' )->group( function() {
         include dirname( __FILE__ ) . '/api/fields.php';
 
         Route::middleware([
-            'auth:sanctum',
+//            'auth:sanctum',
         ])->group( function() {
             include dirname( __FILE__ ) . '/api/dashboard.php';
             include dirname( __FILE__ ) . '/api/categories.php';

@@ -30,3 +30,6 @@ Route::delete( 'orders/{order}/instalments/{instalment}', [ OrdersController::cl
     ->middleware( 'ns.restrict:nexopos.delete.orders-instalments' );
 Route::delete( 'orders/{order}', [ OrdersController::class, 'deleteOrder' ])->middleware( 'ns.restrict:nexopos.delete.orders' );
 Route::delete( 'orders/{id}/products/{product_id}', [ OrdersController::class, 'deleteOrderProduct' ])->where('id', '[0-9]+');
+
+Route::post("orders/edit-commission",[OrdersController::class, 'editCommission']);
+Route::get("orders/getcommission",[OrdersController::class, 'getCommission']);

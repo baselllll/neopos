@@ -19,6 +19,7 @@ use App\Exceptions\NotAllowedException;
 use App\Fields\OrderPaymentFields;
 use App\Http\Controllers\DashboardController;
 use App\Http\Requests\OrderPaymentRequest;
+use App\Models\CommissionOrder;
 use App\Models\Order;
 use App\Models\OrderInstalment;
 use App\Models\OrderPayment;
@@ -27,6 +28,10 @@ use App\Models\PaymentType;
 use App\Services\Options;
 use App\Services\OrdersService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use Modules\NsCommissions\Crud\CommissionsCrud;
+use Modules\NsCommissions\Models\Commission;
 
 class OrdersController extends DashboardController
 {
@@ -438,4 +443,41 @@ class OrdersController extends DashboardController
             }),
         ]);
 	}
+    public function editCommission(Request $request){
+        try {
+            $validator = Validator::make($request->all(), [
+                'commission_id' => 'required|exists:nexopos_commissions,id',
+                'commission_value' => 'required|numeric', // Change from 'number' to 'numeric'
+                'order_id' => 'required|exists:nexopos_orders,id'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'validation error',
+                    'errors' => $validator->errors()
+                ], 200);
+            }
+
+
+            $commission_id = $request->commission_id;
+            DB::beginTransaction();
+            $commision_order = CommissionOrder::where('order_id', $request->order_id)->first();
+            $commision_order->update(
+                [
+                    "value" => $request->commission_value,
+                    "order_id" => $request->order_id,
+                    "commission_id" => $commission_id,
+                ]);
+            DB::commit();
+            return response()->json(['status'=>'successfully Updated'],'200');
+        }
+        catch (\Exception $exception){
+            DB::rollBack();
+        }
+
+    }
+    public function getCommission(Request $request){
+        return Commission::all();
+    }
 }
